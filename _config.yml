@@ -1,0 +1,54 @@
+title: Strixhaven D&D Kampagne
+description: Offizielle Dokumentation und Ressourcen für unsere Strixhaven D&D Kampagne
+theme: jekyll-theme-slate
+
+# Dark theme mit guter Lesbarkeit
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+
+relative_links:
+  enabled: true
+  collections: true
+
+# Automatische Titel aus Headings
+titles_from_headings:
+  enabled: true
+  strip_title: true
+  collections: true
+
+# README als Index verwenden
+readme_index:
+  enabled: true
+  remove_originals: false
+
+# Optional: Navigationsstruktur
+collections:
+  sitzungen:
+    output: true
+    permalink: /:collection/:name
+  charaktere:
+    output: true
+    permalink: /:collection/:name
+  welt:
+    output: true
+    permalink: /:collection/:name
+  akademien:
+    output: true
+    permalink: /:collection/:name
+
+# Exclude Dateien von der Generierung
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
